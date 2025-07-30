@@ -83,9 +83,9 @@ The first line of defense is user (or admin) consent.
 
 ### Token Exchange
 Also know as the On-Behalf-Of (OBO) flow, it is formalized via the [OAuth 2.0 Token Exchange RFC 8693](https://datatracker.ietf.org/doc/html/rfc8693).
-- Azure AD supports OBO via a the [Azure AD On-Behalf-Of flow](https://learn.microsoft.com/en-us/azure/active-directory/develop/v2-oauth-on-behalf-of-flow), 
+- Azure AD supports OBO via a the [Azure AD On-Behalf-Of flow](https://learn.microsoft.com/en-us/entra/identity-platform/v2-oauth2-on-behalf-of-flow), 
 although it does not support separated actor and subject claims. 
-- Okta supports OBO via the [Okta On-Behalf-Of flow](https://developer.okta.com/docs/concepts/obo/), which does support separated actor and subject claims.
+- Okta supports OBO via the [Okta On-Behalf-Of flow](https://developer.okta.com/docs/guides/set-up-token-exchange/main/), which does support separated actor and subject claims.
 - Note that in a multi-hop OBO chain, each agent only sees:
   - The user identity, and 
   - The immediate caller's identity (the previous agent in the chain) - by design
