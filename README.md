@@ -78,9 +78,8 @@ if identitytype == "agent":
     elif actor.tenant_id != user.tenant_id:
         deny("Agent not authorized")
 ```
-This ensures that enriched claims are only injected by agents explicitly scoped to the same tenant 
-as the user — protecting sovereignty, integrity, and auditability.
-
+Checking agent tenant/domain matches the user's is defense in depth and so is checking that the agent has adequate permissions. 
+The first line of defense is user (or admin) consent.
 
 ### Token Exchange
 Also know as the On-Behalf-Of (OBO) flow, it is formalized via the [OAuth 2.0 Token Exchange RFC 8693](https://datatracker.ietf.org/doc/html/rfc8693).
